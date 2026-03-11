@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Leaf, Star, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Products | Alpha Farm — Gir Cow Ghee & VermiCompost",
+    title: "Products | Alpha Farm - Gir Cow Ghee & VermiCompost",
     description:
         "Explore Alpha Farm's premium products: Pure A2 Gir Cow Ghee made using the Bilona method, and organic VermiCompost made from Gir cow dung. Inquire today.",
 };
@@ -56,15 +56,15 @@ export default function ProductsPage() {
                     }}
                 />
                 <div className="relative max-w-4xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
+                    <div className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6 text-balance">
                         <Leaf className="w-3.5 h-3.5" />
                         Pure Gir Cow Products
                     </div>
-                    <h1 className="font-playfair text-5xl md:text-6xl font-bold text-white mb-5">
-                        Nature&apos;s Best,<br />
+                    <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 leading-tight">
+                        Nature&apos;s Best,<br className="hidden sm:block" />
                         <span className="text-[#D4A017]">Carefully Crafted</span>
                     </h1>
-                    <p className="text-white/75 text-lg max-w-2xl mx-auto">
+                    <p className="text-white/75 text-base md:text-lg max-w-2xl mx-auto px-4">
                         Two exceptional products born from the heart of our Gaushala —
                         each one a promise of purity, health, and sustainability.
                     </p>
@@ -94,16 +94,16 @@ export default function ProductsPage() {
                             </p>
                             <p className="text-[#6B4226] leading-relaxed mb-8">
                                 Rich in fat-soluble vitamins (A, D, E, K), CLA (conjugated
-                                linoleic acid), and butyric acid — our ghee supports digestion,
+                                linoleic acid), and butyric acid - our ghee supports digestion,
                                 boosts immunity, and nourishes from within. Sourced exclusively
                                 from our own cows, every batch is small and carefully made.
                             </p>
 
                             {/* Feature grid */}
-                            <div className="grid grid-cols-2 gap-3 mb-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                                 {gheeFeatures.map((f) => (
                                     <div key={f.title} className="bg-[#F8F4E3] rounded-xl p-3.5 border border-[#D9C9A3]">
-                                        <p className="text-xs text-[#6B4226]/70 uppercase tracking-wide">{f.title}</p>
+                                        <p className="text-[10px] text-[#6B4226]/70 uppercase tracking-wide">{f.title}</p>
                                         <p className="text-sm font-semibold text-[#3B2314] mt-0.5">{f.value}</p>
                                     </div>
                                 ))}
@@ -212,10 +212,10 @@ export default function ProductsPage() {
                             </p>
 
                             {/* Feature grid */}
-                            <div className="grid grid-cols-2 gap-3 mb-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                                 {compostFeatures.map((f) => (
                                     <div key={f.title} className="bg-white rounded-xl p-3.5 border border-[#D9C9A3]">
-                                        <p className="text-xs text-[#6B4226]/70 uppercase tracking-wide">{f.title}</p>
+                                        <p className="text-[10px] text-[#6B4226]/70 uppercase tracking-wide">{f.title}</p>
                                         <p className="text-sm font-semibold text-[#3B2314] mt-0.5">{f.value}</p>
                                     </div>
                                 ))}
@@ -233,18 +233,24 @@ export default function ProductsPage() {
             </section>
 
             {/* ── BOTTOM CTA ───────────────────────────────────────────── */}
-            <section className="py-16 px-6 bg-gradient-to-r from-[#2D6A4F] to-[#40916C]">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#FEFAE0] mb-4">
+            <section className="relative py-24 px-6 overflow-hidden bg-[#F8F4E3] border-t-4 border-[#D4A017]">
+                <div className="absolute inset-0 opacity-[0.03]"
+                    style={{
+                        backgroundImage: `radial-gradient(circle at 20% 50%, #3B2314 2px, transparent 2px)`,
+                        backgroundSize: "40px 40px",
+                    }}
+                />
+                <div className="max-w-3xl mx-auto text-center relative z-10">
+                    <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314] mb-4">
                         Interested in Our Products?
                     </h2>
-                    <p className="text-[#FEFAE0]/75 mb-8">
+                    <p className="text-[#6B4226] mb-10 text-lg md:text-xl">
                         We welcome wholesale and retail inquiries. Use our contact form to
                         reach out and we&apos;ll get back to you promptly.
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 bg-[#D4A017] text-[#3B2314] px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#2D6A4F] transition-all duration-300 shadow-xl"
+                        className="inline-flex items-center gap-2 bg-[#2D6A4F] text-[#FEFAE0] px-10 py-4 rounded-full font-bold text-base hover:bg-[#3B2314] transition-all duration-300 shadow-lg hover:shadow-xl"
                     >
                         Send an Inquiry <ArrowRight className="w-5 h-5" />
                     </Link>

@@ -1,11 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, Leaf, Shield, Heart, Star, ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-0">
         {/* Background gradient (will be replaced with image later) */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a4332] via-[#2D6A4F] to-[#3B2314]" />
 
@@ -24,34 +27,34 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
-            <Leaf className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8">
+            <Leaf className="w-3 md:w-3.5 h-3 md:h-3.5" />
             Pure · Natural · Ethical
           </div>
 
-          <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
+          <h1 className="font-playfair text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-4 md:mb-6">
             Nurturing Gir Cows,{" "}
             <span className="text-[#D4A017]">Delivering</span>{" "}
             Nature&apos;s Finest
           </h1>
 
-          <p className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Alpha Farm Gaushala — a sanctuary for sacred Gir cows, rooted in
+          <p className="text-sm md:text-xl text-white/75 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-4 md:px-0">
+            Alpha Farm Gaushala - a sanctuary for sacred Gir cows, rooted in
             ancient Indian tradition. We bring you pure A2 Ghee and organic
             VermiCompost, crafted with love and integrity.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
             <Link
               href="/products"
-              className="group flex items-center gap-2 bg-[#D4A017] text-[#3B2314] px-8 py-4 rounded-full font-semibold text-base hover:bg-[#C97532] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="group flex items-center gap-2 bg-[#D4A017] text-[#3B2314] px-6 py-3.5 md:px-8 md:py-4 rounded-full font-semibold text-sm md:text-base hover:bg-[#C97532] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center"
             >
               Explore Products
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/about"
-              className="flex items-center gap-2 border border-white/40 text-white px-8 py-4 rounded-full font-medium text-base hover:bg-white/10 transition-all duration-300"
+              className="flex items-center gap-2 border border-white/40 text-white px-6 py-3.5 md:px-8 md:py-4 rounded-full font-medium text-sm md:text-base hover:bg-white/10 transition-all duration-300 w-full sm:w-auto justify-center"
             >
               Our Story
             </Link>
@@ -67,7 +70,7 @@ export default function HomePage() {
 
       {/* ── STATS ────────────────────────────────────────────────── */}
       <section className="bg-[#2D6A4F]">
-        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-6 py-10 md:py-12 grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-8">
           {[
             { number: "2022", label: "Established" },
             { number: "100%", label: "Pure A2 Products" },
@@ -75,10 +78,10 @@ export default function HomePage() {
             { number: "2", label: "Premium Products" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="font-playfair text-3xl md:text-4xl font-bold text-[#D4A017]">
+              <p className="font-playfair text-2xl md:text-4xl font-bold text-[#D4A017]">
                 {stat.number}
               </p>
-              <p className="text-sm text-[#FEFAE0]/75 mt-1">{stat.label}</p>
+              <p className="text-[10px] md:text-sm text-[#FEFAE0]/75 mt-1 uppercase tracking-widest">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -86,17 +89,17 @@ export default function HomePage() {
 
       {/* ── ABOUT SNIPPET ────────────────────────────────────────── */}
       <section className="section-padding bg-[#F8F4E3]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
-          <div>
+          <div className="order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
               About Alpha Farm
             </div>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#3B2314] leading-tight mb-6">
+            <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314] leading-tight mb-6">
               A Heritage of Purity &amp; Care
             </h2>
-            <p className="text-[#6B4226] leading-relaxed mb-4">
+            <p className="text-[#6B4226] leading-relaxed mb-4 text-sm md:text-base">
               Founded on 15th March 2022 by{" "}
               <strong className="text-[#2D6A4F]">
                 Shri Kishor Balubhai Vataliya
@@ -108,7 +111,7 @@ export default function HomePage() {
               , Alpha Farm is a dedicated Gir Cow Gaushala rooted in the rich
               traditions of sustainable Indian agriculture.
             </p>
-            <p className="text-[#6B4226] leading-relaxed mb-8">
+            <p className="text-[#6B4226] leading-relaxed mb-8 text-sm md:text-base">
               We believe that the health of the cow, the earth, and the human
               being are deeply interconnected. By caring for our sacred Gir cows
               naturally, we produce products that are as pure as nature intended.
@@ -123,28 +126,28 @@ export default function HomePage() {
           </div>
 
           {/* Visual card */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-[#2D6A4F] to-[#40916C] rounded-3xl p-10 text-[#FEFAE0] relative overflow-hidden">
+          <div className="relative order-1 lg:order-2">
+            <div className="bg-gradient-to-br from-[#2D6A4F] to-[#40916C] rounded-3xl p-8 md:p-10 text-[#FEFAE0] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#D4A017]/20 rounded-full blur-2xl -translate-y-10 translate-x-10" />
-              <Leaf className="w-16 h-16 text-[#D4A017]/60 mb-6" />
-              <blockquote className="font-playfair text-2xl italic leading-relaxed mb-6">
+              <Leaf className="w-12 h-12 md:w-16 md:h-16 text-[#D4A017]/60 mb-6" />
+              <blockquote className="font-playfair text-xl md:text-2xl italic leading-relaxed mb-6">
                 &ldquo;The cow is a poem of pity. One reads pity in the gentle
                 animal.&rdquo;
               </blockquote>
-              <p className="text-sm text-[#FEFAE0]/60">— Mahatma Gandhi</p>
+              <p className="text-sm text-[#FEFAE0]/60">- Mahatma Gandhi</p>
               <div className="mt-8 pt-6 border-t border-[#FEFAE0]/20 grid grid-cols-2 gap-4">
                 <div>
-                  <p className="font-playfair text-2xl font-bold text-[#D4A017]">Gir</p>
-                  <p className="text-xs text-[#FEFAE0]/60">Cow Breed</p>
+                  <p className="font-playfair text-xl md:text-2xl font-bold text-[#D4A017]">Gir</p>
+                  <p className="text-[10px] md:text-xs text-[#FEFAE0]/60 uppercase tracking-wider">Cow Breed</p>
                 </div>
                 <div>
-                  <p className="font-playfair text-2xl font-bold text-[#D4A017]">A2</p>
-                  <p className="text-xs text-[#FEFAE0]/60">Protein Milk</p>
+                  <p className="font-playfair text-xl md:text-2xl font-bold text-[#D4A017]">A2</p>
+                  <p className="text-[10px] md:text-xs text-[#FEFAE0]/60 uppercase tracking-wider">Protein Milk</p>
                 </div>
               </div>
             </div>
             {/* Floating tag */}
-            <div className="absolute -bottom-5 -left-5 bg-[#D4A017] text-[#3B2314] px-5 py-3 rounded-2xl shadow-xl font-semibold text-sm">
+            <div className="absolute -bottom-4 -left-2 md:-bottom-5 md:-left-5 bg-[#D4A017] text-[#3B2314] px-4 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl shadow-xl font-bold text-xs">
               Est. 2022 · Gujarat
             </div>
           </div>
@@ -154,24 +157,24 @@ export default function HomePage() {
       {/* ── PRODUCTS TEASER ──────────────────────────────────────── */}
       <section className="section-padding bg-[#FEFAE0]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10 md:mb-14">
             <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
               Our Products
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
             </div>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#3B2314]">
+            <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314]">
               Nature&apos;s Best, Delivered
             </h2>
-            <p className="text-[#6B4226] mt-4 max-w-xl mx-auto">
+            <p className="text-[#6B4226] mt-4 max-w-xl mx-auto text-sm md:text-base px-4">
               Every product from Alpha Farm is a testament to our commitment to
               purity, sustainability, and ancient wisdom.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex overflow-x-auto md:grid md:grid-cols-2 gap-6 md:gap-8 pb-6 md:pb-0 snap-x snap-mandatory hide-scrollbar px-4 -mx-4 md:px-0 md:mx-0">
             {/* Ghee Card */}
-            <div className="card-hover relative bg-gradient-to-br from-[#FEFAE0] to-[#F8F4E3] rounded-3xl overflow-hidden border border-[#D9C9A3] shadow-lg">
+            <div className="flex-none w-[85vw] md:w-auto snap-start card-hover relative bg-gradient-to-br from-[#FEFAE0] to-[#F8F4E3] rounded-3xl overflow-hidden border border-[#D9C9A3] shadow-lg">
               {/* Color bar */}
               <div className="h-2 bg-gradient-to-r from-[#D4A017] to-[#C97532]" />
               <div className="p-8">
@@ -207,7 +210,7 @@ export default function HomePage() {
             </div>
 
             {/* VermiCompost Card */}
-            <div className="card-hover relative bg-gradient-to-br from-[#FEFAE0] to-[#F8F4E3] rounded-3xl overflow-hidden border border-[#D9C9A3] shadow-lg">
+            <div className="flex-none w-[85vw] md:w-auto snap-start card-hover relative bg-gradient-to-br from-[#FEFAE0] to-[#F8F4E3] rounded-3xl overflow-hidden border border-[#D9C9A3] shadow-lg">
               {/* Color bar */}
               <div className="h-2 bg-gradient-to-r from-[#2D6A4F] to-[#52B788]" />
               <div className="p-8">
@@ -256,19 +259,20 @@ export default function HomePage() {
       {/* ── WHY CHOOSE US ────────────────────────────────────────── */}
       <section className="section-padding bg-[#F8F4E3]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10 md:mb-14">
             <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
               Why Alpha Farm
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
             </div>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#3B2314]">
+            <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314]">
               Our Promise to You
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
+          {/* Define promises array */}
+          {(() => {
+            const promises = [
               {
                 icon: <Leaf className="w-8 h-8 text-[#2D6A4F]" />,
                 bg: "bg-[#2D6A4F]/10",
@@ -287,43 +291,88 @@ export default function HomePage() {
                 title: "Rooted in Tradition",
                 desc: "Ancient Indian practices like the Bilona method ensure our products retain their full nutritional value.",
               },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="card-hover text-center p-8 bg-white rounded-3xl border border-[#D9C9A3] shadow-sm"
-              >
-                <div className={`w-16 h-16 ${item.bg} rounded-2xl flex items-center justify-center mx-auto mb-5`}>
-                  {item.icon}
+            ];
+
+            return (
+              <>
+                <div className="hidden md:grid grid-cols-3 gap-8">
+                  {promises.map((item) => (
+                    <div
+                      key={item.title}
+                      className="card-hover text-center p-8 bg-white rounded-3xl border border-[#D9C9A3] shadow-sm"
+                    >
+                      <div className={`w-16 h-16 ${item.bg} rounded-2xl flex items-center justify-center mx-auto mb-5`}>
+                        {item.icon}
+                      </div>
+                      <h3 className="font-playfair text-xl font-bold text-[#3B2314] mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-[#6B4226] text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="font-playfair text-xl font-bold text-[#3B2314] mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-[#6B4226] text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+
+                {/* Mobile Auto-Scroller */}
+                <div className="md:hidden overflow-hidden relative -mx-6">
+                  <motion.div
+                    animate={{
+                      x: ["0%", "-100%"],
+                    }}
+                    transition={{
+                      x: {
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        duration: 20,
+                        ease: "linear",
+                      },
+                    }}
+                    className="flex gap-4 px-6 w-fit"
+                  >
+                    {[...promises, ...promises].map((item, idx) => (
+                      <div
+                        key={`${item.title}-${idx}`}
+                        className="w-[80vw] shrink-0 text-center p-8 bg-white rounded-3xl border border-[#D9C9A3] shadow-sm"
+                      >
+                        <div className={`w-16 h-16 ${item.bg} rounded-2xl flex items-center justify-center mx-auto mb-5`}>
+                          {item.icon}
+                        </div>
+                        <h3 className="font-playfair text-xl font-bold text-[#3B2314] mb-3">
+                          {item.title}
+                        </h3>
+                        <p className="text-[#6B4226] text-sm leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </motion.div>
+                </div>
+              </>
+            );
+          })()}
         </div>
       </section>
 
       {/* ── CTA BANNER ───────────────────────────────────────────── */}
-      <section className="relative py-20 px-6 overflow-hidden bg-gradient-to-r from-[#2D6A4F] to-[#40916C]">
-        <div className="absolute inset-0 opacity-10"
+      <section className="relative py-24 px-6 overflow-hidden bg-[#F8F4E3] border-t-4 border-[#D4A017]">
+        <div className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, #D4A017 2px, transparent 2px)`,
+            backgroundImage: `radial-gradient(circle at 20% 50%, #3B2314 2px, transparent 2px)`,
             backgroundSize: "40px 40px",
           }}
         />
         <div className="relative max-w-3xl mx-auto text-center">
-          <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#FEFAE0] mb-4">
+          <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314] mb-4 text-balance">
             Ready to Experience Pure Goodness?
           </h2>
-          <p className="text-[#FEFAE0]/75 mb-8 text-lg">
+          <p className="text-[#6B4226] mb-10 text-lg md:text-xl">
             Reach out today for product inquiries, bulk orders, or just to know
             more about our Gaushala.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#D4A017] text-[#3B2314] px-10 py-4 rounded-full font-bold text-base hover:bg-white hover:text-[#2D6A4F] transition-all duration-300 shadow-xl"
+            className="inline-flex items-center gap-2 bg-[#2D6A4F] text-[#FEFAE0] px-10 py-4 rounded-full font-bold text-base hover:bg-[#3B2314] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Contact Us Now <ArrowRight className="w-5 h-5" />
           </Link>

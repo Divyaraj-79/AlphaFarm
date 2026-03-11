@@ -31,9 +31,8 @@ export default function Navbar() {
                 }`}
         >
             <nav className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-                {/* Logo */}
-                <Link href="/" className="flex items-center gap-3 group">
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#D4A017] shadow-md group-hover:scale-105 transition-transform duration-300">
+                <Link href="/" className="flex items-center gap-2 md:gap-3 group shrink-0">
+                    <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-[#D4A017] shadow-md group-hover:scale-105 transition-transform duration-300">
                         <Image
                             src="/alphalogo.jpeg"
                             alt="Alpha Farm Logo"
@@ -43,13 +42,13 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-col leading-tight">
                         <span
-                            className={`font-playfair font-bold text-xl tracking-wide transition-colors duration-300 ${scrolled ? "text-[#2D6A4F]" : "text-white"
+                            className={`font-playfair font-bold text-lg md:text-xl tracking-wide transition-colors duration-300 ${scrolled ? "text-[#2D6A4F]" : "text-white"
                                 }`}
                         >
                             Alpha Farm
                         </span>
                         <span
-                            className={`text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-300 ${scrolled ? "text-[#6B4226]" : "text-[#D4A017]"
+                            className={`text-[9px] md:text-[10px] font-bold tracking-[0.15em] md:tracking-[0.2em] uppercase transition-colors duration-300 ${scrolled ? "text-[#6B4226]" : "text-[#D4A017]"
                                 }`}
                         >
                             Gir Cow Gaushala
@@ -93,24 +92,27 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {menuOpen && (
-                <div className="md:hidden glass border-t border-[#D9C9A3]/40 px-6 py-6 flex flex-col gap-4">
-                    {navLinks.map((link) => (
+                <div className="md:hidden fixed inset-x-0 top-[64px] h-[60vh] bg-[#1a4332]/98 backdrop-blur-xl z-50 animate-in fade-in slide-in-from-top-4 duration-500 flex flex-col p-8 shadow-2xl border-b-4 border-[#D4A017] rounded-b-[3rem]">
+                    <div className="flex flex-col gap-5 items-center text-center my-auto">
+                        {navLinks.map((link, index) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setMenuOpen(false)}
+                                className="text-[#FEFAE0] text-lg font-playfair font-bold hover:text-[#D4A017] transition-all duration-300 hover:scale-110"
+                                style={{ animationDelay: `${index * 50}ms` }}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
                         <Link
-                            key={link.href}
-                            href={link.href}
+                            href="/contact"
                             onClick={() => setMenuOpen(false)}
-                            className="text-[#3B2314] text-base font-medium hover:text-[#2D6A4F] transition-colors"
+                            className="mt-6 w-full max-w-xs text-center bg-[#D4A017] text-[#3B2314] px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-[#2D6A4F] transition-all shadow-xl active:scale-95"
                         >
-                            {link.label}
+                            Inquire Now
                         </Link>
-                    ))}
-                    <Link
-                        href="/contact"
-                        onClick={() => setMenuOpen(false)}
-                        className="mt-2 w-full text-center bg-[#D4A017] text-[#3B2314] px-5 py-2.5 rounded-full font-semibold hover:bg-[#C97532] hover:text-white transition-all"
-                    >
-                        Inquire Now
-                    </Link>
+                    </div>
                 </div>
             )}
         </header>

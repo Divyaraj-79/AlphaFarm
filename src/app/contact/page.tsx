@@ -214,10 +214,10 @@ export default function ContactPage() {
                         <Mail className="w-3.5 h-3.5" />
                         Get In Touch
                     </div>
-                    <h1 className="font-playfair text-5xl md:text-6xl font-bold text-white mb-5">
+                    <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 leading-tight">
                         Contact Alpha Farm
                     </h1>
-                    <p className="text-white/75 text-lg max-w-2xl mx-auto">
+                    <p className="text-white/75 text-base md:text-lg max-w-2xl mx-auto px-4 text-balance">
                         Have a question, want to place an order, or simply want to learn more?
                         We&apos;re happy to hear from you.
                     </p>
@@ -226,9 +226,9 @@ export default function ContactPage() {
 
             {/* ── MAIN CONTENT ─────────────────────────────────────────── */}
             <section className="section-padding bg-[#F8F4E3]">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10 md:gap-12 items-start px-4 sm:px-6">
                     {/* Contact Info — 2/5 */}
-                    <div className="lg:col-span-2 space-y-6">
+                    <div className="lg:col-span-2 space-y-6 md:space-y-8">
                         <div>
                             <h2 className="font-playfair text-3xl font-bold text-[#3B2314] mb-3">
                                 We&apos;d Love to Hear<br />From You
@@ -280,20 +280,23 @@ export default function ContactPage() {
                         ))}
 
                         {/* Partnership note */}
-                        <div className="bg-gradient-to-br from-[#2D6A4F] to-[#40916C] rounded-2xl p-6 text-[#FEFAE0]">
-                            <p className="font-playfair text-lg font-bold text-[#D4A017] mb-2">
+                        <div className="bg-[#E9F0EC] border-2 border-[#2D6A4F]/20 rounded-3xl p-8 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-[#2D6A4F]/5 rounded-full -translate-y-12 translate-x-12" />
+                            <p className="font-playfair text-xl font-bold text-[#2D6A4F] mb-3">
                                 Alpha Farm Partnership
                             </p>
-                            <p className="text-sm text-[#FEFAE0]/75 leading-relaxed">
-                                Managed by <strong className="text-white">Shri Kishor Balubhai Vataliya</strong>{" "}
-                                and <strong className="text-white">Shri Kiranbhai Balubhai Vataliya</strong>.
-                                Est. 15 March 2022.
+                            <p className="text-sm text-[#475C53] leading-relaxed">
+                                Managed by <strong className="text-[#2D6A4F]">Shri Kishor Balubhai Vataliya</strong>{" "}
+                                and <strong className="text-[#2D6A4F]">Shri Kiranbhai Balubhai Vataliya</strong>.
                             </p>
+                            <div className="mt-4 pt-4 border-t border-[#2D6A4F]/10 flex items-center justify-between text-xs font-bold uppercase tracking-widest text-[#2D6A4F]/60">
+                                <span>Est. 15 March 2022</span>
+                            </div>
                         </div>
                     </div>
 
                     {/* Form — 3/5 */}
-                    <div className="lg:col-span-3 bg-white rounded-3xl p-8 border border-[#D9C9A3] shadow-lg">
+                    <div className="lg:col-span-3 bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border border-[#D9C9A3] shadow-lg">
                         <h3 className="font-playfair text-2xl font-bold text-[#3B2314] mb-6">
                             Send Your Inquiry
                         </h3>

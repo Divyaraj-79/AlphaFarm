@@ -54,7 +54,7 @@ export default function GalleryPage() {
                         backgroundSize: "50px 50px",
                     }}
                 />
-                <div className="relative max-w-4xl mx-auto text-center">
+                <div className="relative max-w-4xl mx-auto text-center px-4">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -66,7 +66,7 @@ export default function GalleryPage() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="font-playfair text-5xl md:text-6xl font-bold text-white mb-5"
+                        className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 leading-tight"
                     >
                         Life at Alpha Farm
                     </motion.h1>
@@ -74,7 +74,7 @@ export default function GalleryPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-white/75 text-lg max-w-2xl mx-auto"
+                        className="text-white/75 text-base md:text-lg max-w-2xl mx-auto"
                     >
                         Glimpses of our cows, our organic practices, and the natural harmony we nurture every day.
                     </motion.p>
@@ -87,7 +87,7 @@ export default function GalleryPage() {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
+                        className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-6 space-y-3 md:space-y-6"
                     >
                         {galleryItems.map((item) => (
                             <motion.div

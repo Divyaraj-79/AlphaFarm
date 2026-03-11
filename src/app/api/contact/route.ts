@@ -2,45 +2,45 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
-    try {
-        const body = await req.json();
-        const { name, email, phone, product, message } = body;
+  try {
+    const body = await req.json();
+    const { name, email, phone, product, message } = body;
 
-        // Basic validation
-        if (!name || !email || !phone || !product || !message) {
-            return NextResponse.json(
-                { error: "All fields are required." },
-                { status: 400 }
-            );
-        }
+    // Basic validation
+    if (!name || !email || !phone || !product || !message) {
+      return NextResponse.json(
+        { error: "All fields are required." },
+        { status: 400 }
+      );
+    }
 
-        const productLabels: Record<string, string> = {
-            "gir-cow-ghee": "Gir Cow A2 Ghee",
-            vermicompost: "Organic VermiCompost",
-            both: "Both Products",
-            general: "General Inquiry",
-        };
+    const productLabels: Record<string, string> = {
+      "gir-cow-ghee": "Gir Cow A2 Ghee",
+      vermicompost: "Organic VermiCompost",
+      both: "Both Products",
+      general: "General Inquiry",
+    };
 
-        const productLabel = productLabels[product] || product;
+    const productLabel = productLabels[product] || product;
 
-        // Configure transporter
-        const transporter = nodemailer.createTransport({
-            host: process.env.SMTP_HOST || "smtp.gmail.com",
-            port: parseInt(process.env.SMTP_PORT || "587"),
-            secure: process.env.SMTP_SECURE === "true",
-            auth: {
-                user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
-            },
-        });
+    // Configure transporter
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST || "smtp.gmail.com",
+      port: parseInt(process.env.SMTP_PORT || "587"),
+      secure: process.env.SMTP_SECURE === "true",
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
 
-        // Email to farm owner
-        await transporter.sendMail({
-            from: `"Alpha Farm Website" <${process.env.SMTP_USER}>`,
-            to: process.env.CONTACT_EMAIL_TO,
-            replyTo: email,
-            subject: `New Inquiry: ${productLabel} — from ${name}`,
-            html: `
+    // Email to farm owner
+    await transporter.sendMail({
+      from: `"Alpha Farm Website" <${process.env.SMTP_USER}>`,
+      to: process.env.CONTACT_EMAIL_TO,
+      replyTo: email,
+      subject: `New Inquiry: ${productLabel} — from ${name}`,
+      html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #FEFAE0; border-radius: 16px; overflow: hidden;">
           <div style="background: linear-gradient(135deg, #2D6A4F, #40916C); padding: 30px; text-align: center;">
             <h1 style="color: #FEFAE0; margin: 0; font-size: 28px;">Alpha Farm</h1>
@@ -74,19 +74,19 @@ export async function POST(req: NextRequest) {
           </div>
           <div style="background: #2D6A4F; padding: 16px; text-align: center;">
             <p style="color: #FEFAE0; font-size: 12px; margin: 0; opacity: 0.7;">
-              This inquiry was submitted via alphafarm.in — Please reply directly to ${email}
+              This inquiry was submitted via alphafarm.in - Please reply directly to ${email}
             </p>
           </div>
         </div>
       `,
-        });
+    });
 
-        // Auto-reply to the person who submitted
-        await transporter.sendMail({
-            from: `"Alpha Farm Gaushala" <${process.env.SMTP_USER}>`,
-            to: email,
-            subject: `Thank you for your inquiry, ${name.split(" ")[0]}! — Alpha Farm`,
-            html: `
+    // Auto-reply to the person who submitted
+    await transporter.sendMail({
+      from: `"Alpha Farm Gaushala" <${process.env.SMTP_USER}>`,
+      to: email,
+      subject: `Thank you for your inquiry, ${name.split(" ")[0]}! — Alpha Farm`,
+      html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #FEFAE0; border-radius: 16px; overflow: hidden;">
           <div style="background: linear-gradient(135deg, #2D6A4F, #40916C); padding: 30px; text-align: center;">
             <h1 style="color: #FEFAE0; margin: 0; font-size: 28px;">Alpha Farm</h1>
@@ -120,14 +120,14 @@ export async function POST(req: NextRequest) {
           </div>
         </div>
       `,
-        });
+    });
 
-        return NextResponse.json({ success: true });
-    } catch (error) {
-        console.error("Contact form error:", error);
-        return NextResponse.json(
-            { error: "Failed to send email. Please try again." },
-            { status: 500 }
-        );
-    }
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Contact form error:", error);
+    return NextResponse.json(
+      { error: "Failed to send email. Please try again." },
+      { status: 500 }
+    );
+  }
 }

@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Alpha Farm — Pure Gir Cow Products | Natural & Ethical Gaushala",
+  title: "Alpha Farm - Pure Gir Cow Products | Natural & Ethical Gaushala",
   description:
     "Alpha Farm is a Gir Cow Gaushala offering pure, natural products including A2 Gir Cow Ghee and organic VermiCompost. Rooted in tradition, committed to purity.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Natural Farming",
   ],
   openGraph: {
-    title: "Alpha Farm — Pure Gir Cow Products",
+    title: "Alpha Farm - Pure Gir Cow Products",
     description:
       "Experience the purity of Gir Cow Ghee and organic VermiCompost from Alpha Farm Gaushala.",
     type: "website",
