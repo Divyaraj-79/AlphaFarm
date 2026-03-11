@@ -80,7 +80,7 @@ function ContactForm() {
                     </label>
                     <input
                         {...register("name")}
-                        placeholder="Rajesh Sharma"
+                        placeholder="Your Name"
                         className="w-full px-3 py-2.5 md:px-4 md:py-3 bg-white border border-[#D9C9A3] rounded-xl text-[#3B2314] placeholder-[#6B4226]/40 focus:outline-none focus:ring-2 focus:ring-[#2D6A4F]/40 focus:border-[#2D6A4F] transition-all"
                     />
                     {errors.name && (
@@ -113,7 +113,7 @@ function ContactForm() {
                     </label>
                     <input
                         {...register("phone")}
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 98000 00000"
                         className="w-full px-3 py-2.5 md:px-4 md:py-3 bg-white border border-[#D9C9A3] rounded-xl text-[#3B2314] placeholder-[#6B4226]/40 focus:outline-none focus:ring-2 focus:ring-[#2D6A4F]/40 focus:border-[#2D6A4F] transition-all"
                     />
                     {errors.phone && (
