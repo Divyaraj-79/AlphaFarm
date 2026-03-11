@@ -105,7 +105,7 @@ export default function Footer() {
                                 href="mailto:info@alphafarm.in"
                                 className="text-sm text-[#FEFAE0]/75 hover:text-[#D4A017] transition-colors"
                             >
-                                info@alphafarm.com
+                                info@alphafarm.in
                             </a>
                         </li>
                     </ul>

@@ -255,7 +255,14 @@ export default function ContactPage() {
                             {
                                 Icon: Mail,
                                 title: "Email Us",
-                                line1: "info@alphafarm.in",
+                                line1: (
+                                    <a
+                                        href="mailto:info@alphafarm.in"
+                                        className="text-sm text-[#6B4226] hover:text-[#2D6A4F] transition-colors"
+                                    >
+                                        info@alphafarm.in
+                                    </a>
+                                ),
                             },
                         ].map((item) => (
                             <div
@@ -268,7 +275,6 @@ export default function ContactPage() {
                                 <div>
                                     <p className="font-semibold text-[#3B2314] text-sm">{item.title}</p>
                                     <p className="text-[#6B4226] text-sm">{item.line1}</p>
-                                    <p className="text-[#6B4226]/70 text-xs">{item.line2}</p>
                                 </div>
                             </div>
                         ))}
