@@ -1,65 +1,334 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Leaf, Shield, Heart, Star, ChevronDown } from "lucide-react";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      {/* ── HERO ─────────────────────────────────────────────────── */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background gradient (will be replaced with image later) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a4332] via-[#2D6A4F] to-[#3B2314]" />
+
+        {/* Decorative circles */}
+        <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#D4A017]/10 blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-[#52B788]/10 blur-3xl animate-pulse-slow" />
+
+        {/* Leaf pattern overlay */}
+        <div className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `radial-gradient(circle at 25% 35%, #D4A017 1px, transparent 1px),
+              radial-gradient(circle at 75% 65%, #52B788 1px, transparent 1px)`,
+            backgroundSize: "60px 60px",
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+            <Leaf className="w-3.5 h-3.5" />
+            Pure · Natural · Ethical
+          </div>
+
+          <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
+            Nurturing Gir Cows,{" "}
+            <span className="text-[#D4A017]">Delivering</span>{" "}
+            Nature&apos;s Finest
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Alpha Farm Gaushala — a sanctuary for sacred Gir cows, rooted in
+            ancient Indian tradition. We bring you pure A2 Ghee and organic
+            VermiCompost, crafted with love and integrity.
           </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/products"
+              className="group flex items-center gap-2 bg-[#D4A017] text-[#3B2314] px-8 py-4 rounded-full font-semibold text-base hover:bg-[#C97532] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Explore Products
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/about"
+              className="flex items-center gap-2 border border-white/40 text-white px-8 py-4 rounded-full font-medium text-base hover:bg-white/10 transition-all duration-300"
+            >
+              Our Story
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/50 animate-bounce">
+          <span className="text-xs tracking-widest">Scroll</span>
+          <ChevronDown className="w-4 h-4" />
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ── STATS ────────────────────────────────────────────────── */}
+      <section className="bg-[#2D6A4F]">
+        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { number: "2022", label: "Established" },
+            { number: "100%", label: "Pure A2 Products" },
+            { number: "Gir", label: "Indigenous Cow Breed" },
+            { number: "2", label: "Premium Products" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="font-playfair text-3xl md:text-4xl font-bold text-[#D4A017]">
+                {stat.number}
+              </p>
+              <p className="text-sm text-[#FEFAE0]/75 mt-1">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── ABOUT SNIPPET ────────────────────────────────────────── */}
+      <section className="section-padding bg-[#F8F4E3]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Text */}
+          <div>
+            <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="w-8 h-0.5 bg-[#2D6A4F]" />
+              About Alpha Farm
+            </div>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#3B2314] leading-tight mb-6">
+              A Heritage of Purity &amp; Care
+            </h2>
+            <p className="text-[#6B4226] leading-relaxed mb-4">
+              Founded on 15th March 2022 by{" "}
+              <strong className="text-[#2D6A4F]">
+                Shri Kishor Balubhai Vataliya
+              </strong>{" "}
+              and{" "}
+              <strong className="text-[#2D6A4F]">
+                Shri Kiranbhai Balubhai Vataliya
+              </strong>
+              , Alpha Farm is a dedicated Gir Cow Gaushala rooted in the rich
+              traditions of sustainable Indian agriculture.
+            </p>
+            <p className="text-[#6B4226] leading-relaxed mb-8">
+              We believe that the health of the cow, the earth, and the human
+              being are deeply interconnected. By caring for our sacred Gir cows
+              naturally, we produce products that are as pure as nature intended.
+            </p>
+            <Link
+              href="/about"
+              className="group inline-flex items-center gap-2 text-[#2D6A4F] font-semibold hover:text-[#D4A017] transition-colors"
+            >
+              Read Our Full Story
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Visual card */}
+          <div className="relative">
+            <div className="bg-gradient-to-br from-[#2D6A4F] to-[#40916C] rounded-3xl p-10 text-[#FEFAE0] relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-[#D4A017]/20 rounded-full blur-2xl -translate-y-10 translate-x-10" />
+              <Leaf className="w-16 h-16 text-[#D4A017]/60 mb-6" />
+              <blockquote className="font-playfair text-2xl italic leading-relaxed mb-6">
+                &ldquo;The cow is a poem of pity. One reads pity in the gentle
+                animal.&rdquo;
+              </blockquote>
+              <p className="text-sm text-[#FEFAE0]/60">— Mahatma Gandhi</p>
+              <div className="mt-8 pt-6 border-t border-[#FEFAE0]/20 grid grid-cols-2 gap-4">
+                <div>
+                  <p className="font-playfair text-2xl font-bold text-[#D4A017]">Gir</p>
+                  <p className="text-xs text-[#FEFAE0]/60">Cow Breed</p>
+                </div>
+                <div>
+                  <p className="font-playfair text-2xl font-bold text-[#D4A017]">A2</p>
+                  <p className="text-xs text-[#FEFAE0]/60">Protein Milk</p>
+                </div>
+              </div>
+            </div>
+            {/* Floating tag */}
+            <div className="absolute -bottom-5 -left-5 bg-[#D4A017] text-[#3B2314] px-5 py-3 rounded-2xl shadow-xl font-semibold text-sm">
+              Est. 2022 · Gujarat
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PRODUCTS TEASER ──────────────────────────────────────── */}
+      <section className="section-padding bg-[#FEFAE0]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="w-8 h-0.5 bg-[#2D6A4F]" />
+              Our Products
+              <span className="w-8 h-0.5 bg-[#2D6A4F]" />
+            </div>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#3B2314]">
+              Nature&apos;s Best, Delivered
+            </h2>
+            <p className="text-[#6B4226] mt-4 max-w-xl mx-auto">
+              Every product from Alpha Farm is a testament to our commitment to
+              purity, sustainability, and ancient wisdom.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Ghee Card */}
+            <div className="card-hover relative bg-gradient-to-br from-[#FEFAE0] to-[#F8F4E3] rounded-3xl overflow-hidden border border-[#D9C9A3] shadow-lg">
+              {/* Color bar */}
+              <div className="h-2 bg-gradient-to-r from-[#D4A017] to-[#C97532]" />
+              <div className="p-8">
+                <div className="w-14 h-14 rounded-2xl bg-[#D4A017]/15 flex items-center justify-center mb-5">
+                  <Star className="w-7 h-7 text-[#D4A017]" />
+                </div>
+                <h3 className="font-playfair text-2xl font-bold text-[#3B2314] mb-3">
+                  Gir Cow A2 Ghee
+                </h3>
+                <p className="text-[#6B4226] leading-relaxed mb-4">
+                  Hand-churned from the milk of our cherished Gir cows using the
+                  traditional Bilona method. Rich in A2 beta-casein protein,
+                  antioxidants, and healthy fats. A golden elixir for your
+                  family&apos;s wellness.
+                </p>
+                <ul className="space-y-2 mb-7">
+                  {["100% Pure A2 Milk", "Bilona / Traditional Method", "No Preservatives", "Rich Golden Colour"].map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-sm text-[#6B4226]">
+                      <span className="w-5 h-5 rounded-full bg-[#D4A017]/20 flex items-center justify-center">
+                        <Leaf className="w-3 h-3 text-[#D4A017]" />
+                      </span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact?product=gir-cow-ghee"
+                  className="inline-flex items-center gap-2 bg-[#D4A017] text-[#3B2314] px-6 py-3 rounded-full font-semibold hover:bg-[#C97532] hover:text-white transition-all duration-300"
+                >
+                  Inquire Now <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* VermiCompost Card */}
+            <div className="card-hover relative bg-gradient-to-br from-[#FEFAE0] to-[#F8F4E3] rounded-3xl overflow-hidden border border-[#D9C9A3] shadow-lg">
+              {/* Color bar */}
+              <div className="h-2 bg-gradient-to-r from-[#2D6A4F] to-[#52B788]" />
+              <div className="p-8">
+                <div className="w-14 h-14 rounded-2xl bg-[#2D6A4F]/10 flex items-center justify-center mb-5">
+                  <Leaf className="w-7 h-7 text-[#2D6A4F]" />
+                </div>
+                <h3 className="font-playfair text-2xl font-bold text-[#3B2314] mb-3">
+                  Organic VermiCompost
+                </h3>
+                <p className="text-[#6B4226] leading-relaxed mb-4">
+                  Premium quality vermicompost produced from cow dung of our
+                  healthy Gir cows. A natural soil conditioner that enriches your
+                  garden, farm, or terrace plants with essential nutrients.
+                </p>
+                <ul className="space-y-2 mb-7">
+                  {["Made from Gir Cow Dung", "Rich in Micro-nutrients", "100% Organic", "Improves Soil Health"].map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-sm text-[#6B4226]">
+                      <span className="w-5 h-5 rounded-full bg-[#2D6A4F]/10 flex items-center justify-center">
+                        <Leaf className="w-3 h-3 text-[#2D6A4F]" />
+                      </span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact?product=vermicompost"
+                  className="inline-flex items-center gap-2 bg-[#2D6A4F] text-[#FEFAE0] px-6 py-3 rounded-full font-semibold hover:bg-[#40916C] transition-all duration-300"
+                >
+                  Inquire Now <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 text-[#2D6A4F] font-semibold hover:text-[#D4A017] transition-colors"
+            >
+              View All Product Details <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY CHOOSE US ────────────────────────────────────────── */}
+      <section className="section-padding bg-[#F8F4E3]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="w-8 h-0.5 bg-[#2D6A4F]" />
+              Why Alpha Farm
+              <span className="w-8 h-0.5 bg-[#2D6A4F]" />
+            </div>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#3B2314]">
+              Our Promise to You
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Leaf className="w-8 h-8 text-[#2D6A4F]" />,
+                bg: "bg-[#2D6A4F]/10",
+                title: "100% Natural",
+                desc: "No chemicals, no preservatives, no shortcuts. Everything we produce comes directly from nature, with care.",
+              },
+              {
+                icon: <Shield className="w-8 h-8 text-[#D4A017]" />,
+                bg: "bg-[#D4A017]/10",
+                title: "Ethical Farming",
+                desc: "Our sacred Gir cows are treated with compassion and respect. Happy cows produce the best products.",
+              },
+              {
+                icon: <Heart className="w-8 h-8 text-[#C97532]" />,
+                bg: "bg-[#C97532]/10",
+                title: "Rooted in Tradition",
+                desc: "Ancient Indian practices like the Bilona method ensure our products retain their full nutritional value.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="card-hover text-center p-8 bg-white rounded-3xl border border-[#D9C9A3] shadow-sm"
+              >
+                <div className={`w-16 h-16 ${item.bg} rounded-2xl flex items-center justify-center mx-auto mb-5`}>
+                  {item.icon}
+                </div>
+                <h3 className="font-playfair text-xl font-bold text-[#3B2314] mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-[#6B4226] text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA BANNER ───────────────────────────────────────────── */}
+      <section className="relative py-20 px-6 overflow-hidden bg-gradient-to-r from-[#2D6A4F] to-[#40916C]">
+        <div className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `radial-gradient(circle at 20% 50%, #D4A017 2px, transparent 2px)`,
+            backgroundSize: "40px 40px",
+          }}
+        />
+        <div className="relative max-w-3xl mx-auto text-center">
+          <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#FEFAE0] mb-4">
+            Ready to Experience Pure Goodness?
+          </h2>
+          <p className="text-[#FEFAE0]/75 mb-8 text-lg">
+            Reach out today for product inquiries, bulk orders, or just to know
+            more about our Gaushala.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-[#D4A017] text-[#3B2314] px-10 py-4 rounded-full font-bold text-base hover:bg-white hover:text-[#2D6A4F] transition-all duration-300 shadow-xl"
+          >
+            Contact Us Now <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
