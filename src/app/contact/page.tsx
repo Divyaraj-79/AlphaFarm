@@ -235,7 +235,7 @@ export default function ContactPage() {
                             </h2>
                             <p className="text-[#6B4226] leading-relaxed">
                                 Whether you&apos;re interested in our Gir Cow Ghee, VermiCompost, or
-                                want to know more about Alpha Farm — reach out and we&apos;ll respond
+                                want to know more about Alpha Farm - reach out and we&apos;ll respond
                                 promptly.
                             </p>
                         </div>
@@ -245,20 +245,17 @@ export default function ContactPage() {
                             {
                                 Icon: MapPin,
                                 title: "Our Farm Location",
-                                line1: "Alpha Farm Gaushala,",
-                                line2: "Gujarat, India",
+                                line1: "Aalpha Farm, Nr Karnavati Eyes, Hospital, Oganj- Lapakaman Road, Ta. Ghatlodiya, Ognaj, Ahmedabad, Gujarat 380060",
                             },
                             {
                                 Icon: Phone,
                                 title: "Call Us",
-                                line1: "+91 00000 00000",
-                                line2: "Mon – Sat, 9 AM to 6 PM",
+                                line1: "+91 75678 49349",
                             },
                             {
                                 Icon: Mail,
                                 title: "Email Us",
                                 line1: "info@alphafarm.in",
-                                line2: "We reply within 24 hours",
                             },
                         ].map((item) => (
                             <div

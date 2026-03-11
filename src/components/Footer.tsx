@@ -87,7 +87,7 @@ export default function Footer() {
                         <li className="flex items-start gap-3">
                             <MapPin className="w-4 h-4 text-[#D4A017] mt-0.5 shrink-0" />
                             <span className="text-sm text-[#FEFAE0]/75 leading-relaxed">
-                                Alpha Farm, Gir Cow Gaushala,<br />Gujarat, India
+                                Aalpha Farm, Nr Karnavati Eyes Hospital, Oganj- Lapakaman Road, Ta. Ghatlodiya, Ognaj, Ahmedabad, Gujarat 380060
                             </span>
                         </li>
                         <li className="flex items-center gap-3">
@@ -96,7 +96,7 @@ export default function Footer() {
                                 href="tel:+910000000000"
                                 className="text-sm text-[#FEFAE0]/75 hover:text-[#D4A017] transition-colors"
                             >
-                                +91 00000 00000
+                                +91 75678 49349
                             </a>
                         </li>
                         <li className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export default function Footer() {
                                 href="mailto:info@alphafarm.in"
                                 className="text-sm text-[#FEFAE0]/75 hover:text-[#D4A017] transition-colors"
                             >
-                                info@alphafarm.in
+                                info@alphafarm.com
                             </a>
                         </li>
                     </ul>
