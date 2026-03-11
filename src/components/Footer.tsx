@@ -15,10 +15,10 @@ export default function Footer() {
                     <div className="flex flex-col items-start">
                         <Link href="/" className="flex items-center gap-3 mb-4">
                             <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-[#D4A017] shrink-0">
-                                <Image src="/alphalogo.jpeg" alt="Alpha Farm Logo" fill className="object-cover" />
+                                <Image src="/aalphalogo.jpeg" alt="Aalpha Farm Logo" fill className="object-cover" />
                             </div>
                             <div className="flex flex-col leading-tight">
-                                <span className="font-playfair font-bold text-xl text-[#FEFAE0]">Alpha Farm</span>
+                                <span className="font-playfair font-bold text-xl text-[#FEFAE0]">Aalpha Farm</span>
                                 <span className="text-[9px] text-[#D4A017] font-bold tracking-[0.18em] uppercase">Gir Cow Gaushala</span>
                             </div>
                         </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
                             <li className="flex items-start gap-2.5">
                                 <MapPin className="w-4 h-4 text-[#D4A017] shrink-0 mt-0.5" />
                                 <span className="text-sm text-[#FEFAE0]/70 leading-relaxed">
-                                    Aalpha Farm, Nr Karnavati Eyes Hospital, Oganj - Lapakaman Road, Ta. Ghatlodiya, Ognaj, Ahmedabad, Gujarat 380060
+                                    SN 1469, AALPHA FARM, OGANAJ, OGANAJ LAPAKAMAN ROAD, AHMEDABAD, GUJARAT - 380060
                                 </span>
                             </li>
                             <li className="flex items-center gap-2.5">
@@ -78,7 +78,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-2.5">
                                 <Mail className="w-4 h-4 text-[#D4A017] shrink-0" />
-                                <a href="mailto:info@alphafarm.in" className="text-sm text-[#FEFAE0]/70 hover:text-[#D4A017] transition-colors">info@alphafarm.in</a>
+                                <a href="mailto:aalphafarm22@gmail.com" className="text-sm text-[#FEFAE0]/70 hover:text-[#D4A017] transition-colors">aalphafarm22@gmail.com</a>
                             </li>
                         </ul>
                         <div className="flex gap-3 mt-5">
@@ -102,10 +102,10 @@ export default function Footer() {
                     <div className="flex flex-col items-center text-center">
                         <Link href="/" className="flex items-center gap-3 mb-3">
                             <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#D4A017]">
-                                <Image src="/alphalogo.jpeg" alt="Alpha Farm Logo" fill className="object-cover" />
+                                <Image src="/aalphalogo.jpeg" alt="Aalpha Farm Logo" fill className="object-cover" />
                             </div>
                             <div className="flex flex-col leading-tight">
-                                <span className="font-playfair font-bold text-xl text-[#FEFAE0]">Alpha Farm</span>
+                                <span className="font-playfair font-bold text-xl text-[#FEFAE0]">Aalpha Farm</span>
                                 <span className="text-[9px] text-[#D4A017] font-bold tracking-[0.18em] uppercase">Gir Cow Gaushala</span>
                             </div>
                         </Link>
@@ -153,7 +153,7 @@ export default function Footer() {
                                     <a href="tel:+917567849349" className="text-xs text-[#FEFAE0]/70 hover:text-[#D4A017] transition-colors">+91 75678 49349</a>
                                 </li>
                                 <li>
-                                    <a href="mailto:info@alphafarm.in" className="text-xs text-[#FEFAE0]/70 hover:text-[#D4A017] transition-colors">info@alphafarm.in</a>
+                                    <a href="mailto:aalphafarm22@gmail.com" className="text-xs text-[#FEFAE0]/70 hover:text-[#D4A017] transition-colors">aalphafarm22@gmail.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -178,7 +178,7 @@ export default function Footer() {
             <div className="border-t border-[#FEFAE0]/10">
                 <div className="w-full px-6 md:px-12 lg:px-16 py-4 flex flex-col md:flex-row items-center justify-between gap-1.5 text-center">
                     <p className="text-xs text-[#FEFAE0]/50">
-                        © {new Date().getFullYear()} Alpha Farm - Shri Kishor Balubhai Vataliya &amp; Shri Kiranbhai Balubhai Vataliya. All rights reserved.
+                        © {new Date().getFullYear()} Aalpha Farm - Shri Kishor Balubhai Vataliya &amp; Shri Kiranbhai Balubhai Vataliya. All rights reserved.
                     </p>
                     <div className="flex items-center gap-3 text-[10px] text-[#FEFAE0]/40 uppercase tracking-widest font-bold">
                         <span>Est. 15 March 2022</span>

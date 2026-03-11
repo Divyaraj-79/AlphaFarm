@@ -9,7 +9,7 @@ const images = Array.from({ length: 16 }, (_, i) => ({
     id: i + 1,
     type: "image" as const,
     src: `/${i + 1}.jpeg`,
-    alt: `Alpha Farm Gallery Image ${i + 1}`,
+    alt: `Aalpha Farm Gallery Image ${i + 1}`,
 }));
 
 const videos = [
@@ -68,7 +68,7 @@ export default function GalleryPage() {
                         animate={{ opacity: 1, y: 0 }}
                         className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 leading-tight"
                     >
-                        Life at Alpha Farm
+                        Life at Aalpha Farm
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}

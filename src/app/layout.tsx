@@ -17,12 +17,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Alpha Farm - Pure Gir Cow Products | Natural & Ethical Gaushala",
+  title: "Aalpha Farm - Pure Gir Cow Products | Natural & Ethical Gaushala",
   description:
-    "Alpha Farm is a Gir Cow Gaushala offering pure, natural products including A2 Gir Cow Ghee and organic VermiCompost. Rooted in tradition, committed to purity.",
+    "Aalpha Farm is a Gir Cow Gaushala offering pure, natural products including A2 Gir Cow Ghee and organic VermiCompost. Rooted in tradition, committed to purity.",
   keywords: [
     "Gir Cow Gaushala",
-    "Alpha Farm",
+    "Aalpha Farm",
     "A2 Ghee",
     "VermiCompost",
     "Organic Farm",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     "Natural Farming",
   ],
   openGraph: {
-    title: "Alpha Farm - Pure Gir Cow Products",
+    title: "Aalpha Farm - Pure Gir Cow Products",
     description:
-      "Experience the purity of Gir Cow Ghee and organic VermiCompost from Alpha Farm Gaushala.",
+      "Experience the purity of Gir Cow Ghee and organic VermiCompost from Aalpha Farm Gaushala.",
     type: "website",
   },
 };

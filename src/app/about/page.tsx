@@ -67,19 +67,19 @@ export default function AboutPage() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 100 }}
-                        className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight"
+                        transition={{ delay: 0.1 }}
+                        className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold text-white mb-6 leading-[1.1] tracking-tight"
                     >
-                        About Alpha Farm
+                        Nurturing Tradition,<br className="hidden md:block" /> Delivering Purity
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 200 }}
-                        className="text-white/80 text-base md:text-lg max-w-2xl mx-auto px-4 font-light leading-relaxed"
+                        transition={{ delay: 0.2 }}
+                        className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto px-4 font-light leading-relaxed"
                     >
-                        A story of dedication, tradition, and the love for sacred Gir cows — woven into
-                        every product we offer.
+                        Our journey is a testament to the sacred bond with Gir cows,
+                        preserving ancient wisdom to bring nature&apos;s finest essence to your doorstep.
                     </motion.p>
                 </div>
             </section>
@@ -165,10 +165,10 @@ export default function AboutPage() {
 
                         <div className="space-y-6 text-[#5C4532] text-[15px] md:text-base leading-[1.8] font-light">
                             <p>
-                                Alpha Farm was founded on the belief that the ancient bond between humans
+                                Aalpha Farm was founded on the belief that the ancient bond between humans
                                 and the cow holds tremendous value — not just spiritually, but also in terms of
                                 nutrition, agriculture, and ecology. The Vataliya brothers, guided by this vision,
-                                established Alpha Farm Gaushala on 15th March 2022.
+                                established Aalpha Farm Gaushala on 15th March 2022.
                             </p>
                             <p>
                                 The Gir cow, an indigenous Indian breed from the Gir forests of Gujarat, is at the

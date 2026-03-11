@@ -27,24 +27,43 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8"
+          >
             <Leaf className="w-3 md:w-3.5 h-3 md:h-3.5" />
             Pure · Natural · Ethical
-          </div>
+          </motion.div>
 
-          <h1 className="font-playfair text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-4 md:mb-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="font-playfair text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-4 md:mb-6"
+          >
             Nurturing Gir Cows,{" "}
             <span className="text-[#D4A017]">Delivering</span>{" "}
             Nature&apos;s Finest
-          </h1>
+          </motion.h1>
 
-          <p className="text-sm md:text-xl text-white/75 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-4 md:px-0">
-            Alpha Farm Gaushala - a sanctuary for sacred Gir cows, rooted in
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-sm md:text-xl text-white/75 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-4 md:px-0"
+          >
+            Aalpha Farm Gaushala - a sanctuary for sacred Gir cows, rooted in
             ancient Indian tradition. We bring you pure A2 Ghee and organic
             VermiCompost, crafted with love and integrity.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4"
+          >
             <Link
               href="/products"
               className="group flex items-center gap-2 bg-[#D4A017] text-[#3B2314] px-6 py-3.5 md:px-8 md:py-4 rounded-full font-semibold text-sm md:text-base hover:bg-[#C97532] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center"
@@ -58,7 +77,7 @@ export default function HomePage() {
             >
               Our Story
             </Link>
-          </div>
+          </motion.div>
         </div>
 
         {/* Scroll indicator */}
@@ -94,7 +113,7 @@ export default function HomePage() {
           <div className="order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
-              About Alpha Farm
+              About Aalpha Farm
             </div>
             <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314] leading-tight mb-6">
               A Heritage of Purity &amp; Care
@@ -108,7 +127,7 @@ export default function HomePage() {
               <strong className="text-[#2D6A4F]">
                 Shri Kiranbhai Balubhai Vataliya
               </strong>
-              , Alpha Farm is a dedicated Gir Cow Gaushala rooted in the rich
+              , Aalpha Farm is a dedicated Gir Cow Gaushala rooted in the rich
               traditions of sustainable Indian agriculture.
             </p>
             <p className="text-[#6B4226] leading-relaxed mb-8 text-sm md:text-base">
@@ -167,7 +186,7 @@ export default function HomePage() {
               Nature&apos;s Best, Delivered
             </h2>
             <p className="text-[#6B4226] mt-4 max-w-xl mx-auto text-sm md:text-base px-4">
-              Every product from Alpha Farm is a testament to our commitment to
+              Every product from Aalpha Farm is a testament to our commitment to
               purity, sustainability, and ancient wisdom.
             </p>
           </div>
@@ -262,7 +281,7 @@ export default function HomePage() {
           <div className="text-center mb-10 md:mb-14">
             <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
-              Why Alpha Farm
+              Why Aalpha Farm
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
             </div>
             <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314]">

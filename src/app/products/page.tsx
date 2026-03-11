@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { Leaf, Star, ArrowRight, CheckCircle2 } from "lucide-react";
-
-export const metadata: Metadata = {
-    title: "Products | Alpha Farm - Gir Cow Ghee & VermiCompost",
-    description:
-        "Explore Alpha Farm's premium products: Pure A2 Gir Cow Ghee made using the Bilona method, and organic VermiCompost made from Gir cow dung. Inquire today.",
-};
+import { motion } from "framer-motion";
 
 const gheeFeatures = [
     { title: "Breed", value: "Purebred Gir Cow" },
@@ -56,18 +52,32 @@ export default function ProductsPage() {
                     }}
                 />
                 <div className="relative max-w-4xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6 text-balance">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="inline-flex items-center gap-2 bg-[#D4A017]/20 border border-[#D4A017]/40 text-[#D4A017] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6 text-balance"
+                    >
                         <Leaf className="w-3.5 h-3.5" />
                         Pure Gir Cow Products
-                    </div>
-                    <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 leading-tight">
+                    </motion.div>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 leading-tight"
+                    >
                         Nature&apos;s Best,<br className="hidden sm:block" />
                         <span className="text-[#D4A017]">Carefully Crafted</span>
-                    </h1>
-                    <p className="text-white/75 text-base md:text-lg max-w-2xl mx-auto px-4">
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-white/75 text-base md:text-lg max-w-2xl mx-auto px-4"
+                    >
                         Two exceptional products born from the heart of our Gaushala —
                         each one a promise of purity, health, and sustainability.
-                    </p>
+                    </motion.p>
                 </div>
             </section>
 
