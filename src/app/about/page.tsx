@@ -11,7 +11,7 @@ export default function AboutPage() {
             accent: "bg-[#40916C]",
             title: "Agriculture & Dairy",
             points: [
-                "Gir Cow Gaushala management",
+                "Gir Gay Gaushala management",
                 "A2 milk production",
                 "Ghee manufacturing (Bilona method)",
                 "Animal husbandry & livestock care",
@@ -78,7 +78,7 @@ export default function AboutPage() {
                         transition={{ delay: 0.2 }}
                         className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto px-4 font-light leading-relaxed"
                     >
-                        Our journey is a testament to the sacred bond with Gir cows,
+                        Our journey is a testament to the sacred bond with Gir Gay cows,
                         preserving ancient wisdom to bring nature&apos;s finest essence to your doorstep.
                     </motion.p>
                 </div>
@@ -160,24 +160,24 @@ export default function AboutPage() {
                         </div>
 
                         <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold text-[#3B2314] mb-10">
-                            Born from a Passion for Purity
+                            Aalpha Gir Gay Gaushala: Born from Purity
                         </h2>
 
                         <div className="space-y-6 text-[#5C4532] text-[15px] md:text-base leading-[1.8] font-light">
                             <p>
-                                Aalpha Farm was founded on the belief that the ancient bond between humans
+                                Aalpha Gir Gay Gaushala was founded on the belief that the ancient bond between humans
                                 and the cow holds tremendous value — not just spiritually, but also in terms of
                                 nutrition, agriculture, and ecology. The Vataliya brothers, guided by this vision,
-                                established Aalpha Farm Gaushala on 15th March 2022.
+                                established Aalpha Gir Gay Gaushala on 15th March 2022.
                             </p>
                             <p>
-                                The Gir cow, an indigenous Indian breed from the Gir forests of Gujarat, is at the
+                                The Gir Gay cow, an indigenous Indian breed from the Gir forests of Gujarat, is at the
                                 heart of everything we do. Known for producing A2-type milk enriched with
-                                beneficial proteins and nutrients, Gir cows are regarded as one of the finest
+                                beneficial proteins and nutrients, Gir Gay cows are regarded as one of the finest
                                 dairy breeds in the world.
                             </p>
                             <p>
-                                Our Gaushala is not just a farm — it is a sanctuary. Every cow is fed on natural
+                                Our Gaushala is not just a farm — it is a sanctuary. Every Gir Gay cow is fed on natural
                                 fodder, given ample space to roam, and treated with the care and reverence she
                                 deserves. This ethical approach directly reflects in the quality and purity of our
                                 products.

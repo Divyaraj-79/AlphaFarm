@@ -35,7 +35,7 @@ export default function Navbar() {
                     <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-[#D4A017] shadow-md group-hover:scale-105 transition-transform duration-300">
                         <Image
                             src="/aalphalogo.jpeg"
-                            alt="Aalpha Farm Logo"
+                            alt="Aalpha Gir Gay Gaushala Logo"
                             fill
                             className="object-cover"
                         />
@@ -45,13 +45,13 @@ export default function Navbar() {
                             className={`font-playfair font-bold text-lg md:text-xl tracking-wide transition-colors duration-300 ${scrolled ? "text-[#2D6A4F]" : "text-white"
                                 }`}
                         >
-                            Aalpha Farm
+                            Aalpha Gir
                         </span>
                         <span
                             className={`text-[9px] md:text-[10px] font-bold tracking-[0.15em] md:tracking-[0.2em] uppercase transition-colors duration-300 ${scrolled ? "text-[#6B4226]" : "text-[#D4A017]"
                                 }`}
                         >
-                            Gir Cow Gaushala
+                            Gay Gaushala
                         </span>
                     </div>
                 </Link>

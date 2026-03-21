@@ -225,7 +225,7 @@ export default function ContactPage() {
                         transition={{ delay: 0.1 }}
                         className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 leading-tight"
                     >
-                        Contact Aalpha Farm
+                        Contact Aalpha Gir Gay Gaushala
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -250,7 +250,7 @@ export default function ContactPage() {
                             </h2>
                             <p className="text-[#6B4226] text-sm md:text-base leading-relaxed">
                                 Whether you&apos;re interested in our Gir Cow Ghee, VermiCompost, or
-                                want to know more about Aalpha Farm - reach out and we&apos;ll respond
+                                want to know more about Aalpha Gir Gay Gaushala - reach out and we&apos;ll respond
                                 promptly.
                             </p>
                         </div>
@@ -298,7 +298,7 @@ export default function ContactPage() {
                         <div className="bg-[#E9F0EC] border-2 border-[#2D6A4F]/20 rounded-2xl md:rounded-3xl p-6 md:p-8 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-[#2D6A4F]/5 rounded-full -translate-y-12 translate-x-12" />
                             <p className="font-playfair text-lg md:text-xl font-bold text-[#2D6A4F] mb-3">
-                                Aalpha Farm Partnership
+                                Aalpha Gir Gay Gaushala Partnership
                             </p>
                             <p className="text-[13px] md:text-sm text-[#475C53] leading-relaxed">
                                 Managed by <strong className="text-[#2D6A4F]">Shri Kishor Balubhai Vataliya</strong>{" "}

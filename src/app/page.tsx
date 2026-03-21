@@ -53,8 +53,8 @@ export default function HomePage() {
             transition={{ delay: 0.2 }}
             className="text-sm md:text-xl text-white/75 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-4 md:px-0"
           >
-            Aalpha Farm Gaushala - a sanctuary for sacred Gir cows, rooted in
-            ancient Indian tradition. We bring you pure A2 Ghee and organic
+            Aalpha Gir Gay Gaushala - a sanctuary for sacred Gir cows, rooted in
+            ancient Indian tradition. At Aalpha Gir Gay Gaushala, we bring you pure A2 Ghee and organic
             VermiCompost, crafted with love and integrity.
           </motion.p>
 
@@ -113,7 +113,7 @@ export default function HomePage() {
           <div className="order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
-              About Aalpha Farm
+              About Aalpha Gir Gay Gaushala
             </div>
             <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314] leading-tight mb-6">
               A Heritage of Purity &amp; Care
@@ -127,8 +127,8 @@ export default function HomePage() {
               <strong className="text-[#2D6A4F]">
                 Shri Kiranbhai Balubhai Vataliya
               </strong>
-              , Aalpha Farm is a dedicated Gir Cow Gaushala rooted in the rich
-              traditions of sustainable Indian agriculture.
+              , Aalpha Gir Gay Gaushala is a dedicated sanctuary rooted in the rich
+              traditions of sustainable Indian agriculture. Aalpha Gir Gay Gaushala is committed to excellence.
             </p>
             <p className="text-[#6B4226] leading-relaxed mb-8 text-sm md:text-base">
               We believe that the health of the cow, the earth, and the human
@@ -186,8 +186,7 @@ export default function HomePage() {
               Nature&apos;s Best, Delivered
             </h2>
             <p className="text-[#6B4226] mt-4 max-w-xl mx-auto text-sm md:text-base px-4">
-              Every product from Aalpha Farm is a testament to our commitment to
-              purity, sustainability, and ancient wisdom.
+              purity, sustainability, and ancient wisdom at Aalpha Gir Gay Gaushala.
             </p>
           </div>
 
@@ -201,10 +200,10 @@ export default function HomePage() {
                   <Star className="w-7 h-7 text-[#D4A017]" />
                 </div>
                 <h3 className="font-playfair text-2xl font-bold text-[#3B2314] mb-3">
-                  Gir Cow A2 Ghee
+                  Gir Gay A2 Ghee
                 </h3>
                 <p className="text-[#6B4226] leading-relaxed mb-4">
-                  Hand-churned from the milk of our cherished Gir cows using the
+                  Hand-churned from the milk of our cherished Gir Gay cows using the
                   traditional Bilona method. Rich in A2 beta-casein protein,
                   antioxidants, and healthy fats. A golden elixir for your
                   family&apos;s wellness.
@@ -241,11 +240,11 @@ export default function HomePage() {
                 </h3>
                 <p className="text-[#6B4226] leading-relaxed mb-4">
                   Premium quality vermicompost produced from cow dung of our
-                  healthy Gir cows. A natural soil conditioner that enriches your
+                  healthy Gir Gay cows. A natural soil conditioner that enriches your
                   garden, farm, or terrace plants with essential nutrients.
                 </p>
                 <ul className="space-y-2 mb-7">
-                  {["Made from Gir Cow Dung", "Rich in Micro-nutrients", "100% Organic", "Improves Soil Health"].map((f) => (
+                  {["Made from Gir Gay Dung", "Rich in Micro-nutrients", "100% Organic", "Improves Soil Health"].map((f) => (
                     <li key={f} className="flex items-center gap-2 text-sm text-[#6B4226]">
                       <span className="w-5 h-5 rounded-full bg-[#2D6A4F]/10 flex items-center justify-center">
                         <Leaf className="w-3 h-3 text-[#2D6A4F]" />
@@ -281,7 +280,7 @@ export default function HomePage() {
           <div className="text-center mb-10 md:mb-14">
             <div className="inline-flex items-center gap-2 text-[#2D6A4F] text-xs font-semibold tracking-widest uppercase mb-4">
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
-              Why Aalpha Farm
+              Why Aalpha Gir Gay Gaushala
               <span className="w-8 h-0.5 bg-[#2D6A4F]" />
             </div>
             <h2 className="font-playfair text-3xl md:text-5xl font-bold text-[#3B2314]">
